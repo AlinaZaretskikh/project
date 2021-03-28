@@ -44,7 +44,7 @@ export default {
     display: inline-flex;
     align-items: center;
     justify-items: center;
-    background-color: white;
+    background-color: rgb(174, 192, 240);
     width: 300px;
     height: 350px;
     border-radius: 10px;

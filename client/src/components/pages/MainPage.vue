@@ -1,22 +1,25 @@
 <template>
     <div class="main-page">
         <NavBar/>
-        <Gallery/>        
+        <ProductCard/>        
     </div>
 </template>
 
 <script>
 import NavBar from '../navigation/NavBar.vue'
-import Gallery from '../gallery/Gallery'
+import ProductCard from '../cards/ProductCard.vue'
 export default {
     name: 'MainPage',
     components: {
         NavBar,
-        Gallery
+        ProductCard
     }
 }
 </script>
 
 <style>
-
+.main-page{
+    display: flex;
+    flex-direction: column;
+}
 </style>

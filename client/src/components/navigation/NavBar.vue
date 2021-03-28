@@ -4,7 +4,7 @@
         <div class="left-nav-bar">
         <ul>
             <li><router-link to="/">Главная</router-link></li>
-            <li><router-link to="#">Каталог</router-link></li>
+            <li><router-link to="/katalog">Каталог</router-link></li>
             <li><router-link to="/">Корзина</router-link></li>
         </ul>
         </div>
@@ -84,7 +84,7 @@ font-family: "impact";
     color: rgb(182, 226, 243);
 }
 ul a:hover{
-background-color: rgb(19, 216, 12);
-color: #7c0707;
+background-color: yellow;
+color: black;
 }
 </style>
