@@ -5,19 +5,20 @@ import VueRouter from 'vue-router';
 import MainPage from '../components/pages/MainPage.vue'
 import LoginPage from '../components/pages/LoginPage.vue'
 import RegisPage from '../components/pages/RegisPage.vue'
+//import NavBar from '../components/navigation/NavBar.vue'
 Vue.use(VueRouter);
 
 let router = new VueRouter({
     routes: [
         {
-            name: 'login',
+            name: 'main',
             path: '/',
-            component: LoginPage
+            component: MainPage
         },
         {
-            name: 'main',
-            path: '/main',
-            component: MainPage
+            name: 'login',
+            path: '/login',
+            component: LoginPage
         },
         {
             name: 'regis',
