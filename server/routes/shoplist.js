@@ -19,11 +19,10 @@ router.post('/', function(req, res) {
     req.body.user_id,
     req.body.product_id,
     req.body.count,
-    req.body.price,
-    req.body.id
+    req.body.price
   ];
   // пытаемся записать данные о корзине в базу
-  db.any('INSERT INTO shoplist (user_id, product_id, count, price, id) VALUES ($1, $2, $3, $4, $5)', data)
+  db.any('INSERT INTO shoplist (user_id, product_id, count, price) VALUES ($1, $2, $3, $4)', data)
   // если запрос успешен - отправляем статус ОК
   .then(function() {
     return res.sendStatus(200);

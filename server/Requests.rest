@@ -42,6 +42,19 @@ Content-Type: application/json
 //запрос на удаление определённого пользователя
 DELETE http://localhost:3000/users 
 Content-Type: application/json
+
 {
     "id":4
+}
+
+###
+// запрос на добавление товара к корзину 
+POST http://localhost:3000/users/shoplist
+Content-Type: application/json
+
+{
+    "user_id" : "12345678",
+    "product_id" : "5",
+    "price" : "456",
+    "count" : "45"
 }
