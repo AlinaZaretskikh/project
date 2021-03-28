@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
     name: 'LoginForm',
     data() {
@@ -26,9 +27,19 @@ export default {
             }
         }
     },
+    computed: {
+        ...mapGetters([
+            'USER_ID'
+        ])
+    },
     methods: {
-        onSubmit() {
-            this.$router.push({name: 'main'})
+        ...mapActions([
+            'LOGIN'
+        ]),
+        async onSubmit() {
+            await this.LOGIN(form);
+            if (this.USER_ID > 0)
+                this.$router.push({name: 'main'})
         },
         onRegClicked() {
             this.$router.push({name: 'regis'})
