@@ -19,11 +19,10 @@ router.post('/', function(req, res) {
     req.body.user_id,
     req.body.products_id,
     req.body.price,
-    req.body.id,
     req.body.count
   ];
   // пытаемся записать данные об избранном в базу
-  db.any('INSERT INTO favorites (user_id, products_id, price, id, count) VALUES ($1, $2, $3, $4, $5)', data)
+  db.any('INSERT INTO favorites (user_id, products_id, price, count) VALUES ($1, $2, $3, $4)', data)
   // если запрос успешен - отправляем статус ОК
   .then(function() {
     return res.sendStatus(200);

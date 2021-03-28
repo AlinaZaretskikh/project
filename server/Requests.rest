@@ -44,17 +44,17 @@ DELETE http://localhost:3000/users
 Content-Type: application/json
 
 {
-    "id":4
+    "id":20
 }
 
 ###
-// запрос на добавление товара к корзину 
-POST http://localhost:3000/users/shoplist
+// POST запрос на создание новой корзины
+POST http://localhost:3000/shoplist
 Content-Type: application/json
 
 {
-    "user_id" : "12345678",
-    "product_id" : "5",
-    "price" : "456",
-    "count" : "45"
+    "user_id" : 1,
+    "product_id" : 1,
+    "counte" : 28,
+    "price" : 2500
 }
