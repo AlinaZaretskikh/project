@@ -2,42 +2,33 @@
     <div class="katalog-page">
         <NavBar/>
         <div class="katalogs">
-            <div class="katalog" v-for="category in categories" v-bind:key="category.id">
+            <div class="katalog" v-for="category in CATEGORIES" v-bind:key="category.id">
                 <p>{{category.name}}</p>
             </div>
         </div>
-             
     </div>
 </template>
 
 <script>
 import NavBar from '../navigation/NavBar'
+import { mapActions, mapGetters } from 'vuex'
 export default {
     name: 'KatalogPage',
     components: {
         NavBar
     },
-    data() {
-        return {
-            categories: [
-                {
-                    id: 1,
-                    name: 'Coml'
-                },
-                {
-                    id: 2,
-                    name: 'Coml2'
-                },
-                {
-                    id: 3,
-                    name: 'Coml3'
-                },
-                {
-                    id: 4,
-                    name: 'Coml4'
-                }
-            ]
-        }
+    computed: {
+        ...mapGetters([
+            'CATEGORIES'
+        ])
+    },
+    methods: {
+        ...mapActions([
+            'GET_CATEGORIES'
+        ])
+    },
+    mounted() {
+        this.GET_CATEGORIES();
     }
 }
 </script>
