@@ -16,7 +16,6 @@
         <ul>
             <li><a href="#">Избранное</a></li>
             <li><a href="#">Помощь</a></li>
-            <li><a href="#">Помощь</a></li>
             <li><a href="#">Вход</a></li>
         </ul>
         </div>
