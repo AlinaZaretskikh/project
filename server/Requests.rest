@@ -37,3 +37,11 @@ Content-Type: application/json
     "login" : "12345678",
     "password" : "1password2"
 }
+
+###
+//запрос на удаление определённого пользователя
+DELETE http://localhost:3000/users 
+Content-Type: application/json
+{
+    "id":4
+}

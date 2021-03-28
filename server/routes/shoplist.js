@@ -3,7 +3,7 @@ var router = express.Router();
 var db = require('../bd');
 
 router.get('/', function(req, res, next) {
-    db.any('SELECT * FROM products')
+    db.any('SELECT * FROM shoplist')
     .then(function(data) {
       res.send(data);
     })
@@ -12,18 +12,18 @@ router.get('/', function(req, res, next) {
     });
   });
 
-  // POST запрос на создание нового продукта
+  // POST запрос на создание новой корзины
 router.post('/', function(req, res) {
-  // собираем данные о продукте в массив
+  // собираем данные о корзине в массив
   let data = [
-    req.body.name,
+    req.body.user_id,
+    req.body.product_id,
+    req.body.count,
     req.body.price,
-    req.body.rank,
-    req.body.description,
-    req.body.count
+    req.body.id
   ];
-  // пытаемся записать данные о продукте в базу
-  db.any('INSERT INTO products (name, price, rank, description, count) VALUES ($1, $2, $3, $4, $5)', data)
+  // пытаемся записать данные о корзине в базу
+  db.any('INSERT INTO shoplist (user_id, product_id, count, price, id) VALUES ($1, $2, $3, $4, $5)', data)
   // если запрос успешен - отправляем статус ОК
   .then(function() {
     return res.sendStatus(200);
