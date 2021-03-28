@@ -4,7 +4,7 @@ export default {
         categories: []
     },
     getters: {
-        categories(state) {
+        CATEGORIES(state) {
             return state.categories
         }
     },

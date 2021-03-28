@@ -1,25 +1,27 @@
 <template>
+<nav>
     <div class="nav-bar">
         <div class="left-nav-bar">
         <ul>
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Корзина</a></li>
+            <li><router-link to="/">Главная</router-link></li>
+            <li><router-link to="/katalog">Каталог</router-link></li>
+            <li><router-link to="/">Корзина</router-link></li>
         </ul>
         </div>
 
         <div class="center-nav-bar">
-            <ul><li>LOGOTIP</li></ul>
+            <ul><li>ОПЕРАТИВ</li></ul>
         </div>
 
         <div class="right-nav-bar">
         <ul>
-            <li><a href="#">Избранное</a></li>
-            <li><a href="#">Помощь</a></li>
-            <li><a href="#">Вход</a></li>
+            <li><router-link to="/">Избранное</router-link></li>
+            <li><router-link to="/">Помощь</router-link></li>
+            <li><router-link to="/login">Вход</router-link></li>
         </ul>
         </div>
     </div>
+</nav>
 </template>
 
 <script>
@@ -33,57 +35,56 @@ export default {
 
 
 <style scoped>
-/* .nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: blue;
-} */
+nav {
+    display: inline;
+}
 .nav-bar {
     display: inline;
+    float: left;
+    background-color: rgb(37, 7, 94);
 }
 .left-nav-bar {
     display: inline-block;
-    background-color: brown;
 }
 .right-nav-bar {
      display: inline-block;
-    background-color: burlywood;
 }
 .center-nav-bar {
-     display: inline-block;
-    background-color: darkblue;
+     display: inline;
 }
-/* ul {
-    display: flex;
-    flex-direction: row;
-} */
-
 ul {
     margin-left: 0px;
     padding-left: 0px;
     list-style: none;
 }
-/* li {
-    width: 150px;
-    list-style: none;
-    border: solid 3px black;
-} */
 li { 
     display: inline; 
 }
-ul a, .center-nav-bar {
-                display: inline-block;
-                width: 5em;
-                padding:10px;
-                background-color: #f4f4f4;
-                border: 1px solid #333;
-                text-decoration: none;
-                color: #333;
-                text-align: center;
-            }
+.center-nav-bar {
+display: inline-block;
+color: whitesmoke;
+width: 12em;
+background-color:rgb(37, 7, 94);
+font-size: 20px;
+text-decoration: none;
+text-align: center;
+}
+ul a {
+    font-size: 25px;
+    margin: 4px;
+display: inline-block;
+width: 7.72em;
+padding:2px;
+background-color:rgb(17, 3, 43);
+border: 4px solid black;
+border-radius: 5px;
+text-decoration: none;
+text-align: center;
+font-family: "impact";
+    color: rgb(182, 226, 243);
+}
 ul a:hover{
-                background-color: #333;
-                color: #f4f4f4;
-            }
+background-color: yellow;
+color: black;
+}
 </style>
