@@ -22,6 +22,12 @@ export default {
             .catch(function(error) {
                 console.log(error);
             })
+        },
+        ADD_TO_BASKET(_, params) {
+            axios.post('http://localhost:3000/shoplist', params)
+            .catch(function(error) {
+                console.log(error);
+            })
         }
     }
 }

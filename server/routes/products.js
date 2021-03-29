@@ -36,11 +36,11 @@ router.post('/', function(req, res) {
   });
 });
 
-router.get('/:id', function(req, res, next) {
+router.get('/:category_id', function(req, res, next) {
   let params = [
-    req.params.id
+    req.params.category_id
   ]
-  db.any('SELECT * FROM products WHERE id = $1', params)
+  db.any('SELECT * FROM products WHERE category_id = $1', params)
   .then(function(data) {
     res.send(data);
   })
@@ -49,4 +49,4 @@ router.get('/:id', function(req, res, next) {
   });
 });
 
-  module.exports = router;
+module.exports = router;

@@ -5,14 +5,32 @@
             <p>{{product.name}}</p>
             <p>Цена: {{product.price}}</p>
             <p>Количество: {{product.count}}</p>
-            <button>Добавить в корзину</button>
+            <button v-on:click="addClicked">Добавить в корзину</button>
         </div>
     </div>
 </template>
 <script>
+import { mapActions, mapGetters } from 'vuex'
 export default {
     name: 'ProductCard',
-    props: ['product']
+    props: ['product'],
+    computed: {
+        ...mapGetters([
+            'USER_ID'
+        ])
+    },
+    methods: {
+        ...mapActions([
+            'ADD_TO_BASKET'
+        ]),
+        addClicked() {
+            let data = {
+                user_id: this.USER_ID,
+                product_id: this.product.id
+            }
+            this.ADD_TO_BASKET(data)
+        }
+    }
 }
 </script>
 <style>

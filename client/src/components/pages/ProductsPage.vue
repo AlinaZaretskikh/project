@@ -18,5 +18,8 @@ export default {
 </script>
 
 <style>
-
+.products-page {
+    max-width: 1920px;
+    width: 100%
+}
 </style>
