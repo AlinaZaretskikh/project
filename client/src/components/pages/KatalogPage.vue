@@ -1,6 +1,6 @@
 <template>
     <div class="katalog-page">
-        <NavBar/>
+        <Navigation/>
         <div class="katalogs">
             <div class="katalog" v-for="category in CATEGORIES" v-bind:key="category.id">
                 <p>{{category.name}}</p>
@@ -10,12 +10,12 @@
 </template>
 
 <script>
-import NavBar from '../navigation/NavBar'
+import Navigation from '../navigation/Navigation'
 import { mapActions, mapGetters } from 'vuex'
 export default {
     name: 'KatalogPage',
     components: {
-        NavBar
+        Navigation
     },
     computed: {
         ...mapGetters([
@@ -37,10 +37,18 @@ export default {
 .katalog-page {
     display: flex;
     flex-direction: column;
+    max-width: 1920px;
+    width: 100%;
 }
 .katalogs {
     display: flex;
     flex-direction: row;
+    max-width: 1920px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+
 }
 .katalog{
     font-family: impact;
@@ -54,6 +62,7 @@ export default {
     margin: 10px;
     border: 4px solid black;
     background-color: rgb(218, 145, 238);
+    text-align: center;
 }
 
 </style>
