@@ -3,7 +3,7 @@
         <Navigation/>
         <div class="katalogs">
             <div class="katalog" v-for="category in CATEGORIES" v-bind:key="category.id">
-                <p>{{category.name}}</p>
+                <p v-on:click="categoryClicked">{{category.name}}</p>
             </div>
         </div>
     </div>
@@ -25,7 +25,10 @@ export default {
     methods: {
         ...mapActions([
             'GET_CATEGORIES'
-        ])
+        ]),
+        categoryClicked() {
+            this.$router.push({name: 'products'});
+        }
     },
     mounted() {
         this.GET_CATEGORIES();

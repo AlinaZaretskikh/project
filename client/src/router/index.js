@@ -7,6 +7,7 @@ import LoginPage from '../components/pages/LoginPage.vue'
 import RegisPage from '../components/pages/RegisPage.vue'
 import KatalogPage from '../components/pages/KatalogPage.vue'
 //import NavBar from '../components/navigation/NavBar.vue'
+import ProductsPage from '../components/pages/ProductsPage.vue'
 Vue.use(VueRouter);
 
 let router = new VueRouter({
@@ -30,6 +31,11 @@ let router = new VueRouter({
             name: 'katalog',
             path: '/katalog',
             component: KatalogPage
+        },
+        {
+            name: 'products',
+            path: '/products',
+            component: ProductsPage
         }
     ]
 })
