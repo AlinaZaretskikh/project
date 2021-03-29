@@ -1,7 +1,6 @@
 <template>
     <div class="main-page">
         <Navigation/>
-        
         <ProductCard/>        
     </div>
 </template>
@@ -24,5 +23,6 @@ export default {
 .main-page{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 </style>

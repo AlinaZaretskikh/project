@@ -6,7 +6,7 @@
             <input id='login' type="text" v-model="form.login">
             <br>
             <label for="password">Пароль </label>
-            <input id="password" type="text" v-model="form.password">
+            <input id="password" type="password" v-model="form.password">
             <br>
             <button class="vxod">Войти</button>
             <br>
