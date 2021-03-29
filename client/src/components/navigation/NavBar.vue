@@ -39,8 +39,6 @@ nav {
     display: inline;
 }
 .nav-bar {
-    max-width: 1800px;
-    width: 100%;
     display: inline;
     float: left;
     background-color: rgb(37, 7, 94);
