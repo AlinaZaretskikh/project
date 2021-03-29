@@ -1,20 +1,18 @@
 <template>
     <div class="main-page">
         <Navigation/>
-        <ProductCard/>        
+        <Products/>        
     </div>
 </template>
 
 <script>
 import Navigation from '../navigation/Navigation.vue'
-
-import ProductCard from '../cards/ProductCard.vue'
+import Products from '../lists/Products'
 export default {
     name: 'MainPage',
     components: {
         Navigation,
-        
-        ProductCard
+        Products
     }
 }
 </script>
@@ -23,6 +21,7 @@ export default {
 .main-page{
     display: flex;
     flex-direction: column;
+    max-width: 1920px;
     width: 100%;
 }
 </style>
