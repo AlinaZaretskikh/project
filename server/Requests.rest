@@ -85,11 +85,11 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-    "name" : "Клавиатура",
+    "name" : "Принтер",
     "price" : 2500,
-    "rank" : 1,
-    "description" : "Чёрная",
-    "count" : 28
+    "rank" : 13,
+    "description" : "Чёрный",
+    "count" : 29
 }
 
 ###
