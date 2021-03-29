@@ -70,8 +70,8 @@ text-decoration: none;
 text-align: center;
 }
 ul a {
-    font-size: 25px;
-    margin: 4px;
+font-size: 25px;
+margin: 4px;
 display: inline-block;
 width: 7.72em;
 padding:2px;
