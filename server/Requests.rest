@@ -53,8 +53,28 @@ POST http://localhost:3000/shoplist
 Content-Type: application/json
 
 {
-    "user_id" : 1,
-    "product_id" : 1,
-    "count" : 28,
+    "user_id" : 7,
+    "product_id" : 9,
+    "count" : 1,
     "price" : 2500
 }
+
+###
+
+GET http://localhost:3000/shoplist/1
+
+###
+// POST запрос на создание нового избранного
+POST http://localhost:3000/favorites
+Content-Type: application/json
+
+{
+    "count" : 28,
+    "user_id" : 2,
+    "product_id" : 7,
+    "price" : 2500
+}
+
+###
+
+GET http://localhost:3000/products/2

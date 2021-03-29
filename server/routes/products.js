@@ -36,4 +36,17 @@ router.post('/', function(req, res) {
   });
 });
 
+router.get('/:id', function(req, res, next) {
+  let params = [
+    req.params.id
+  ]
+  db.any('SELECT * FROM products WHERE id = $1', params)
+  .then(function(data) {
+    res.send(data);
+  })
+  .catch(function(error) {
+    console.log(error);
+  });
+});
+
   module.exports = router;

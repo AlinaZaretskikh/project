@@ -12,6 +12,19 @@ router.get('/', function(req, res, next) {
     });
   });
 
+  router.get('/:user_id', function(req, res, next) {
+    let params = [
+      req.params.user_id
+    ]
+    db.any('SELECT * FROM shoplist WHERE user_id = $1', params)
+    .then(function(data) {
+      res.send(data);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+  });
+
   // POST запрос на создание новой корзины
 router.post('/', function(req, res) {
   // собираем данные о корзине в массив
