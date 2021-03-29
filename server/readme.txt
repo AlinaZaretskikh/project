@@ -1,1 +1,1 @@
-set debug=server:*& npm start
+set debug = server : * & npm start
