@@ -77,4 +77,21 @@ Content-Type: application/json
 
 ###
 
+GET http://localhost:3000/favorites/1
+
+###
+// POST запрос на создание нового продукта
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name" : "Клавиатура",
+    "price" : 2500,
+    "rank" : 1,
+    "description" : "Чёрная",
+    "count" : 28
+}
+
+###
+
 GET http://localhost:3000/products/2
