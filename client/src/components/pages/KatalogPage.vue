@@ -37,10 +37,17 @@ export default {
 .katalog-page {
     display: flex;
     flex-direction: column;
+    max-width: 1920px;
+    width: 100%;
 }
 .katalogs {
     display: flex;
     flex-direction: row;
+    max-width: 1920px;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 .katalog{
     font-family: impact;
@@ -49,6 +56,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 300px;
     height: 300px;
     margin: 10px;
